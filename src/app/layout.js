@@ -11,7 +11,36 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavBarPage />
+        <div className='container'>
+          {children}
+        </div>
+        <section>
+        <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://cdn.pixabay.com/photo/2023/02/15/19/28/sea-7792564_960_720.jpg" class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2023/02/15/19/28/sea-7792564_960_720.jpg" class="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg" class="d-block w-100" alt="..."/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+        </section>
+        <FooterPage />
+        </body>
     </html>
   )
 }
